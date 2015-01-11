@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e168ba7bc1fc44f2a862a83d0c11d339" Name="Diagram1">
+        <EntityTypeShape EntityType="SklepDataBaseModel.Address" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.CartItem" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.Cart" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.Item" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SklepDataBaseModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="SklepDataBaseModel.Users_Addresses" ManuallyRouted="false" />
+        <AssociationConnector Association="SklepDataBaseModel.CartItems_Cart" ManuallyRouted="false" />
+        <AssociationConnector Association="SklepDataBaseModel.Orders_Carts" ManuallyRouted="false" />
+        <AssociationConnector Association="SklepDataBaseModel.Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SklepDataBaseModel.Items_CartItems" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

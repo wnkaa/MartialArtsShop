@@ -1,0 +1,70 @@
+﻿.top_text1{
+    position:absolute; 
+    top:82px;
+    border:solid 2px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:100%;
+}
+.top_text2{
+    position:absolute; 
+    top:82px;
+    color:red;
+    border:solid 2px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:100%;
+}
+.sidebar {
+    width:100%;
+    margin-top:-22px;
+    padding:0;
+}
+.sidebar ul {
+    text-decoration:none;
+    list-style-type:none;
+    padding:0;
+    margin-top:2px;
+} 
+.sidebar a:hover{
+    text-decoration:none;
+}
+.sidebarItem {
+   width:100%;
+   padding:10px;
+   padding-top:10px;
+   margin-left:-30px;
+   padding-left:0px;
+   margin-bottom:1px;
+   border:solid red 1px;
+   border-bottom:solid 1px;
+   text-align:center;
+   background-color:grey;
+}
+#aktiw{
+    background-color:#696969;
+}
+.mouseON {
+    border-bottom:solid 10px cyan;
+}
+div.pageLinks{
+    text-align:center;
+
+}
+div.pageLinks a{
+    text-align:center;
+    text-decoration:none;
+    margin:2px;
+}
+div.pageLinks a:hover{
+    background-color:white;
+}
+div.pageLinks a.selectedPage{
+    color:red;
+}
+div.pageLinks a.selectedPage:hover{
+    background-color:white;
+}
+

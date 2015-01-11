@@ -1,0 +1,53 @@
+﻿@model Sklep.WebApp.Models.DTO.CartDTO
+
+@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <h4>Twoj Koszyk</h4>
+    <hr />
+    <table class="table">
+        <thead><tr>
+            <th>Ilosc</th>
+            <th>Produkt</th>
+            <th>Cena</th>
+            <th>Wartosc</th>
+            </tr></thead>
+        <tbody>
+            @foreach (var cartItem in Model.CartItems)
+            {
+            <tr>
+                <td>@Html.DisplayFor(it => cartItem.Item.Name)</td> 
+                <td> @Html.DisplayFor(it => cartItem.Quanity)</td>
+                <td> @Html.DisplayFor(it=>cartItem.Item.Prize)</td>
+                <td> @Html.DisplayFor(it => cartItem.Prize)</td>
+                <td>
+                    @using (Html.BeginForm("removeFromCart", "Cart"))
+                    {
+                        @Html.Hidden("ItemID", cartItem.Item.ItemID)
+                        <button type="submit" class="btn btn-primary " ><span class="glyphicon glyphicon-minus" aria-hidden="true">Usun</span></button>
+
+                    }
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <dl class="dl-horizontal pull-right">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prize)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Kontynuuj zakupy", "Items","Home",null,null) |
+    @Html.ActionLink("Zrealizuj zakupy","CheckOut","Order",null,null)
+</p>

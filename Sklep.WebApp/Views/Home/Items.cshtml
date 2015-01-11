@@ -1,0 +1,51 @@
+﻿@model Sklep.WebApp.Models.ViewModels.ItemsViewModel
+@{
+    ViewBag.Title = "Items";
+}
+
+    <div class="col-lg-12">
+        <div class="col-lg-2 sidebar">
+            <ul>
+                <li class="sidebarItem">@Html.ActionLink("Rekawice", "Items", "Home", new { category = "Rekawice" }, null)</li>
+                <li class="sidebarItem">@Html.ActionLink("Buty", "Items", "Home", new { category = "Buty" }, null)</li>
+                <li class="sidebarItem">@Html.ActionLink("Ochraniacze", "Items", "Home", new { category = "Ochraniacze" }, null)</li>
+                <li class="sidebarItem">@Html.ActionLink("Akcesoria", "Items", "Home", new { category = "Akcesoria" }, null)</li>
+            </ul>
+        </div>
+        <div class="col-lg-10">
+            @if (Model != null)
+            {
+                
+                    <h2>@Model.category</h2>
+                    foreach (var item in Model.listItem)
+                    {
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail" style="height:200px">
+                            <img data-src="holder.js/300x300" alt="ImageShouldBehere">
+                            <div class="caption">
+                                <h3>@Html.DisplayFor(i => item.Name)</h3>
+                                <p>Quanity: @Html.DisplayFor(i => item.Quanity)</p>
+                                <p>Price: @Html.DisplayFor(i => item.Prize)</p>
+
+                                    
+                                    <a href="" class="pull-left">Details</a>
+                                        @using (Html.BeginForm("addToCart", "Cart"))
+                                        {
+                                            @Html.Hidden("ItemID",item.ItemID);
+                                            @Html.Hidden("returnUrl", Request.Url.Query)
+                                            <button type="submit" value="Dodaj do koszyka" class="btn btn-primary pull-right"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+                                        }
+                            </div>
+                        </div>
+                    </div>
+                
+            }
+            <div class="clearfix"></div>
+                <div class="pageLinks" >
+                    @Html.PageLinks(Model.pagingInfo, x => Url.Action("Items", new { category = Model.category, page = x }))
+                </div>
+            }
+        </div>
+    </div>
+
+
