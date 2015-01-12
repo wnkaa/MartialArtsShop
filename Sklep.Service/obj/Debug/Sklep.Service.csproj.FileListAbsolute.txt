@@ -21,3 +21,16 @@ C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.Service\bin\Ent
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.Service\obj\Debug\Sklep.Service.csprojResolveAssemblyReference.cache
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.Service\obj\Debug\Sklep.Service.dll
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.Service\obj\Debug\Sklep.Service.pdb
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\AutoMapper.Net4.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\Sklep.Service.dll.config
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\Sklep.Service.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\Sklep.Service.pdb
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\AutoMapper.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\EntityFramework.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\EntityFramework.SqlServer.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\AutoMapper.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\EntityFramework.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\bin\EntityFramework.SqlServer.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\obj\Debug\Sklep.Service.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\obj\Debug\Sklep.Service.pdb
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.Service\obj\Debug\Sklep.Service.csprojResolveAssemblyReference.cache

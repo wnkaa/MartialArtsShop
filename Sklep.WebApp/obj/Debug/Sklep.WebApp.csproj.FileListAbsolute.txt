@@ -22,3 +22,27 @@ C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.WebApp\bin\Syst
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.WebApp\obj\Debug\Sklep.WebApp.csprojResolveAssemblyReference.cache
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.WebApp\obj\Debug\Sklep.WebApp.dll
 C:\Users\Piotr\Documents\Visual Studio 2013\Projects\Sklep\Sklep.WebApp\obj\Debug\Sklep.WebApp.pdb
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\Sklep.WebApp.dll.config
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\Sklep.WebApp.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\Sklep.WebApp.pdb
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\EntityFramework.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Helpers.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Mvc.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Razor.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.Razor.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\EntityFramework.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Razor.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Webpages.Razor.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Helpers.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\bin\System.Web.Mvc.xml
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\obj\Debug\Sklep.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\obj\Debug\Sklep.WebApp.dll
+C:\Users\Piotr\Documents\GitHub\MartialArtsShop\Sklep.WebApp\obj\Debug\Sklep.WebApp.pdb

@@ -18,4 +18,8 @@ namespace Sklep.WebApp.Models.DTO
 
         public UserDTO User { get; set; }
     }
+    public class OrderCheck {
+    public int CartID { get; set; }
+    public int UserID { get; set; }
+    }
 }

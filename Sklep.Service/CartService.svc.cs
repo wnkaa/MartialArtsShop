@@ -19,12 +19,18 @@ namespace Sklep.Service
             var lista = ctx.Carts.ToList();
             return Mapper.Map<List<CartDTO>>(lista);
         }
+
+        public int getLastID()
+        {
+            var last =ctx.Carts.OrderByDescending(c => c.CartID).Take(1);
+            return last.First().CartID;
+        }
         public CartDTO getByID(string id)
         {
             int ID;
             if (int.TryParse(id, out ID))
             {
-                var item = ctx.Carts.FirstOrDefault(i => i.CartId == ID);
+                var item = ctx.Carts.FirstOrDefault(i => i.CartID == ID);
                 if (item != null)
                 {
                     return Mapper.Map<Cart, CartDTO>(item);
@@ -58,5 +64,7 @@ namespace Sklep.Service
         {
             ctx.Dispose();
         }
+
+
     }
 }

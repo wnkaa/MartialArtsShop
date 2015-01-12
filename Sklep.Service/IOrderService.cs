@@ -18,6 +18,7 @@ namespace Sklep.Service
             ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "Orders")]
         List<OrderDTO> getAll();
+
         //Orders/id
         [OperationContract]
         [WebGet(
@@ -27,9 +28,9 @@ namespace Sklep.Service
         //Orders/Add
         [OperationContract]
         [WebInvoke(
+            Method = "POST",
             ResponseFormat = WebMessageFormat.Json,
             RequestFormat = WebMessageFormat.Json,
-            Method = "POST",
             UriTemplate = "Orders/Add")]
         void add(OrderDTO order);
         //Orders/Update

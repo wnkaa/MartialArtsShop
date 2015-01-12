@@ -20,7 +20,7 @@ namespace Sklep.Service
             this.Orders = new HashSet<Order>();
         }
     
-        public int CartId { get; set; }
+        public int CartID { get; set; }
         public decimal Prize { get; set; }
     
         public virtual ICollection<CartItem> CartItems { get; set; }

@@ -22,4 +22,12 @@ namespace Sklep.Service.DTO
         [DataMember]
         public UserDTO User { get; set; }
     }
+    [DataContract]
+    public class OrderCheck {
+        [DataMember]
+        public int CartID { get; set; }
+        [DataMember]
+        public int UserID { get; set; }
+    }
+
 }

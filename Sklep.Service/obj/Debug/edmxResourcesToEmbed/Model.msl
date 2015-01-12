@@ -23,7 +23,7 @@
     <EntitySetMapping Name="Carts">
       <EntityTypeMapping TypeName="SklepDataBaseModel.Cart">
         <MappingFragment StoreEntitySet="Carts">
-          <ScalarProperty Name="CartId" ColumnName="CartId" />
+          <ScalarProperty Name="CartID" ColumnName="CartId" />
           <ScalarProperty Name="Prize" ColumnName="Prize" />
         </MappingFragment>
       </EntityTypeMapping>

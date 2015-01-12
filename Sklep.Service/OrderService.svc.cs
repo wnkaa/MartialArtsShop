@@ -37,8 +37,11 @@ namespace Sklep.Service
 
         public void add(OrderDTO order)
         {
-            Order ord = Mapper.Map<OrderDTO,Order>(order);
-            ctx.Orders.Add(ord);
+
+           // //Order ord = new Order() {OrderDate = order.OrderDate, UserID= order.UserID , User = ctx.Users.FirstOrDefault(u=> u.UserID==order.UserID), CartID = order.CartID, Cart= ctx.Carts.FirstOrDefault(c=> c.CartID == order.CartID) };
+            Order orde = new Order { CartID=2035, OrderDate = DateTime.Now, UserID =3};
+            //Order orde = Mapper.Map<Order>(order);
+            ctx.Orders.Add(orde);
             ctx.SaveChanges();
         }
 
@@ -60,5 +63,8 @@ namespace Sklep.Service
         {
             ctx.Dispose();
         }
+
+
+
     }
 }

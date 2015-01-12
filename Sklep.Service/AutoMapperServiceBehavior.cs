@@ -5,7 +5,7 @@ using System.Web;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
-using System.Web;
+
 
 namespace Sklep.Service
 {

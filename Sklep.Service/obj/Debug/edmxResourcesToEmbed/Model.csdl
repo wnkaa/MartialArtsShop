@@ -22,9 +22,9 @@
   </EntityType>
   <EntityType Name="Cart">
     <Key>
-      <PropertyRef Name="CartId" />
+      <PropertyRef Name="CartID" />
     </Key>
-    <Property Name="CartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Prize" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <NavigationProperty Name="CartItems" Relationship="Self.CartItems_Cart" FromRole="Carts" ToRole="CartItems" />
     <NavigationProperty Name="Orders" Relationship="Self.Orders_Carts" FromRole="Carts" ToRole="Orders" />
@@ -91,7 +91,7 @@
     <End Role="CartItems" Type="Self.CartItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Carts">
-        <PropertyRef Name="CartId" />
+        <PropertyRef Name="CartID" />
       </Principal>
       <Dependent Role="CartItems">
         <PropertyRef Name="CartID" />
@@ -103,7 +103,7 @@
     <End Role="Orders" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Carts">
-        <PropertyRef Name="CartId" />
+        <PropertyRef Name="CartID" />
       </Principal>
       <Dependent Role="Orders">
         <PropertyRef Name="CartID" />

@@ -18,6 +18,7 @@ namespace Sklep.Service
         public System.DateTime OrderDate { get; set; }
         public int UserID { get; set; }
         public Nullable<int> CartID { get; set; }
+    
         public virtual Cart Cart { get; set; }
         public virtual User User { get; set; }
     }

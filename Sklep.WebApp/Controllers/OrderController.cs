@@ -15,53 +15,70 @@ namespace Sklep.WebApp.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly string orderService = "http://localhost:3060/OrderService.svc/Orders/";
+        private readonly string orderService = "http://localhost:3060/OrderService.svc/Orders/Add/";
         private readonly string cartService = "http://localhost:3060/CartService.svc/Carts/";
         private readonly string CartItemService = "http://localhost:3060/CartItemService.svc/CartItems/";
         private readonly string UserService = "http://localhost:3060/UserService.svc/Users/";
         // GET: Order
         public ActionResult CheckOut()
         {
-            CartDTO cart = (CartDTO)Session["Cart"];
+             CartDTO cart = (CartDTO)Session["Cart"];
+             if (cart == null)
+                 cart = new CartDTO();
+
             UserDTO user = new UserDTO();
 
             using(WebClient wc = new WebClient()){
                 string data;
-                data =wc.DownloadString(UserService+"1");
+                data =wc.DownloadString(UserService+"3");
                 user = JsonConvert.DeserializeObject<UserDTO>(data);
             }
-            var date = DateTime.Now.ToString("yyyy-MM-dd");
-            OrderDTO order = new OrderDTO() { 
-            Cart=cart,
-            OrderDate=DateTime.ParseExact(date,"yyyy-MM-dd",null),
-            User=user,
-            UserID= user.UserID,
-            CartID=cart.CartID
-            };
-               
-                
-                foreach (var item in cart.CartItems)
-                {
-                    var req1 = HttpWebRequest.Create(CartItemService + "Add");
-                    var dataToSend1 = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(item));
-                    req1.ContentType = "application/json";
-                    req1.ContentLength = dataToSend1.Length;
-                    req1.Method = "POST";
-                    req1.GetRequestStream().Write(dataToSend1, 0, dataToSend1.Length);
-                }
-                var req2 = HttpWebRequest.Create(cartService + "Add");
-                var dataToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(cart));
-                req2.ContentType = "application/json";
-                req2.ContentLength = dataToSend.Length;
-                req2.Method = "POST";
-                req2.GetRequestStream().Write(dataToSend, 0, dataToSend.Length);
 
-                var req3 = HttpWebRequest.Create(orderService + "Add");
-                var dataToSend2 = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(order));
-                req3.ContentType = "application/json";
-                req3.ContentLength = dataToSend2.Length;
-                req3.Method = "POST";
-                req3.GetRequestStream().Write(dataToSend2, 0, dataToSend2.Length);
+
+            foreach (var item in cart.CartItems)
+            {
+                var req1 = HttpWebRequest.Create(CartItemService + "Add");
+                var dataToSend1 = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(item));
+                req1.ContentType = "application/json";
+                req1.ContentLength = dataToSend1.Length;
+                req1.Method = "POST";
+                req1.GetRequestStream().Write(dataToSend1, 0, dataToSend1.Length);
+            }
+            var req2 = HttpWebRequest.Create(cartService + "Add");
+            var dataToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(cart));
+            req2.ContentType = "application/json";
+            req2.ContentLength = dataToSend.Length;
+            req2.Method = "POST";
+            req2.GetRequestStream().Write(dataToSend, 0, dataToSend.Length);
+            int cartid =  0;
+            CartDTO cartdto = new CartDTO();
+            using (WebClient wc = new WebClient())
+            {
+
+                var data = (wc.DownloadString("http://localhost:3060/CartService.svc/Carts/last"));
+                cartid = Convert.ToInt32(data);
+                var kart = (wc.DownloadString("http://localhost:3060/CartService.svc/Carts/"+cartid));
+                cartdto= JsonConvert.DeserializeObject<CartDTO>(kart);
+            }
+            
+            
+            //var sprawdz = JsonConvert.SerializeObject(order);
+            //var dataToSend2 = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(order));
+            //var dataJson = JsonConvert.SerializeObject(order);
+            //why the heck it isnt working QQ
+            // still dunno why it isnt working QQ
+            OrderDTO ord = new OrderDTO { OrderID = 1, OrderDate = DateTime.Now, CartID=cartid,Cart=cartdto,User=user,UserID=user.UserID };
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(orderService);
+            httpWebRequest.ContentType = "application/json; charset=utf-8";
+            httpWebRequest.Method = "POST";
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                var json = JsonConvert.SerializeObject(ord);
+
+                streamWriter.Write(json);
+                streamWriter.Flush();
+            }
+
             return View();
         }
     }

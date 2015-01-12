@@ -19,6 +19,12 @@ namespace Sklep.Service
                 BodyStyle = WebMessageBodyStyle.Wrapped,
                 UriTemplate = "Carts")]
         List<CartDTO> getAll();
+        //Carts/last
+        [WebGet(RequestFormat = WebMessageFormat.Json,
+               ResponseFormat = WebMessageFormat.Json,
+               BodyStyle = WebMessageBodyStyle.Bare,
+               UriTemplate = "Carts/last")]
+        int getLastID();
         //Carts/id
         [OperationContract]
         [WebGet(RequestFormat = WebMessageFormat.Json,
