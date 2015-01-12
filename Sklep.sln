@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sklep.Service", "Sklep.Service\Sklep.Service.csproj", "{1CE58435-EAB9-4C2C-9061-6DDA0CB0BBB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sklep.WebApp", "Sklep.WebApp\Sklep.WebApp.csproj", "{1F362C3E-A5D4-4DD5-AB38-DFF4A920769D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CE58435-EAB9-4C2C-9061-6DDA0CB0BBB1} = {1CE58435-EAB9-4C2C-9061-6DDA0CB0BBB1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
