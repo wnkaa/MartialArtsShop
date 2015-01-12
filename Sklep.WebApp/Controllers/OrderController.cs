@@ -15,7 +15,7 @@ namespace Sklep.WebApp.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly string orderService = "http://localhost:3060/OrderService.svc/Orders/Add/";
+        private readonly string orderService = "http://localhost:3060/OrderService.svc/Orders/Add";
         private readonly string cartService = "http://localhost:3060/CartService.svc/Carts/";
         private readonly string CartItemService = "http://localhost:3060/CartItemService.svc/CartItems/";
         private readonly string UserService = "http://localhost:3060/UserService.svc/Users/";
@@ -50,11 +50,12 @@ namespace Sklep.WebApp.Controllers
             req2.ContentLength = dataToSend.Length;
             req2.Method = "POST";
             req2.GetRequestStream().Write(dataToSend, 0, dataToSend.Length);
+           
             int cartid =  0;
             CartDTO cartdto = new CartDTO();
             using (WebClient wc = new WebClient())
             {
-
+                
                 var data = (wc.DownloadString("http://localhost:3060/CartService.svc/Carts/last"));
                 cartid = Convert.ToInt32(data);
                 var kart = (wc.DownloadString("http://localhost:3060/CartService.svc/Carts/"+cartid));
@@ -69,7 +70,7 @@ namespace Sklep.WebApp.Controllers
             // still dunno why it isnt working QQ
             OrderDTO ord = new OrderDTO { OrderID = 1, OrderDate = DateTime.Now, CartID=cartid,Cart=cartdto,User=user,UserID=user.UserID };
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(orderService);
-            httpWebRequest.ContentType = "application/json; charset=utf-8";
+            httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {

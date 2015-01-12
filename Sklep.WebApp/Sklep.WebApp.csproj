@@ -124,11 +124,13 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
     <Compile Include="Models\DTO\AddressDTO.cs" />
+    <Compile Include="Models\DTO\ApplicationUser.cs" />
     <Compile Include="Models\DTO\CartDTO.cs" />
     <Compile Include="Models\DTO\CartItemDTO.cs" />
     <Compile Include="Models\DTO\ItemDTO.cs" />
@@ -136,6 +138,7 @@
     <Compile Include="Models\DTO\UserDTO.cs" />
     <Compile Include="Models\ViewModels\ItemsViewModel.cs" />
     <Compile Include="Models\ViewModels\PagingInfo.cs" />
+    <Compile Include="Models\ViewModels\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

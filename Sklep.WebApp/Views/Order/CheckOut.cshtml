@@ -6,10 +6,10 @@
 <h2>CheckOut</h2>
 <script>
     $(document).ready(function () {
-        var o = { CartID:"2028", UserID:"3" };
+        var o = { Prize:"111",ItemID:"2",Name:"Nazwa",Category:"Rekawice",Quanity:"2" };
         $.ajax({
             type: "POST",
-            url: "http://localhost:3060/OrderService.svc/Orders/Add",
+            url: "http://localhost:3060/CartService.svc/Carts/Add",
             data: JSON.stringify(o),
             contentType: "application/json",
             dataType: "json",
