@@ -16,7 +16,7 @@ namespace Sklep.Service.DTO
         [DataMember]
         public CartDTO Cart { get; set; }
         [DataMember]
-        public int CartID { get; set; }
+        public Nullable<int> CartID { get; set; }
         [DataMember]
         public int UserID { get; set; }
         [DataMember]

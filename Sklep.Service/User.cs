@@ -24,6 +24,7 @@ namespace Sklep.Service
         public string Pasword { get; set; }
         public string Roles { get; set; }
         public int AddressID { get; set; }
+        public string Email { get; set; }
     
         public virtual Address Address { get; set; }
         public virtual ICollection<Order> Orders { get; set; }

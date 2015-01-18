@@ -23,7 +23,7 @@
     <EntitySetMapping Name="Carts">
       <EntityTypeMapping TypeName="SklepDataBaseModel.Cart">
         <MappingFragment StoreEntitySet="Carts">
-          <ScalarProperty Name="CartID" ColumnName="CartId" />
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
           <ScalarProperty Name="Prize" ColumnName="Prize" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -69,6 +69,7 @@
           <ScalarProperty Name="Pasword" ColumnName="Pasword" />
           <ScalarProperty Name="Roles" ColumnName="Roles" />
           <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

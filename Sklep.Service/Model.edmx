@@ -24,9 +24,9 @@
         </EntityType>
         <EntityType Name="Carts">
           <Key>
-            <PropertyRef Name="CartId" />
+            <PropertyRef Name="CartID" />
           </Key>
-          <Property Name="CartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Prize" Type="decimal" Precision="19" Scale="4" Nullable="false" />
         </EntityType>
         <EntityType Name="Items">
@@ -76,13 +76,14 @@
           <Property Name="Pasword" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Roles" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="AddressID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="CartItems_Cart">
           <End Role="Carts" Type="Self.Carts" Multiplicity="0..1" />
           <End Role="CartItems" Type="Self.CartItems" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Carts">
-              <PropertyRef Name="CartId" />
+              <PropertyRef Name="CartID" />
             </Principal>
             <Dependent Role="CartItems">
               <PropertyRef Name="CartID" />
@@ -118,7 +119,7 @@
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Carts">
-              <PropertyRef Name="CartId" />
+              <PropertyRef Name="CartID" />
             </Principal>
             <Dependent Role="Orders">
               <PropertyRef Name="CartID" />
@@ -259,6 +260,7 @@
           <Property Name="Pasword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Roles" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="AddressID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Address" Relationship="Self.Users_Addresses" FromRole="Users" ToRole="Addresses" />
           <NavigationProperty Name="Orders" Relationship="Self.Orders_Users" FromRole="Users" ToRole="Orders" />
         </EntityType>
@@ -371,7 +373,7 @@
           <EntitySetMapping Name="Carts">
             <EntityTypeMapping TypeName="SklepDataBaseModel.Cart">
               <MappingFragment StoreEntitySet="Carts">
-                <ScalarProperty Name="CartID" ColumnName="CartId" />
+                <ScalarProperty Name="CartID" ColumnName="CartID" />
                 <ScalarProperty Name="Prize" ColumnName="Prize" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -417,6 +419,7 @@
                 <ScalarProperty Name="Pasword" ColumnName="Pasword" />
                 <ScalarProperty Name="Roles" ColumnName="Roles" />
                 <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

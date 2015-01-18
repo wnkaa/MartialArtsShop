@@ -11,7 +11,7 @@ namespace Sklep.WebApp.Models.DTO
 
         public int UserID { get; set; }
 
-        public string Name { get; set; }
+        public string Username { get; set; }
 
         public string Pasword { get; set; }
 
@@ -20,6 +20,6 @@ namespace Sklep.WebApp.Models.DTO
         public int AddressID { get; set; }
 
         public AddressDTO Address { get; set; }
-
+        public string Email { get; set; }
     }
 }

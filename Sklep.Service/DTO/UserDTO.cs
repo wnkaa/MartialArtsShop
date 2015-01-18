@@ -13,7 +13,7 @@ namespace Sklep.Service.DTO
         [DataMember]
         public int UserID { get; set; }
         [DataMember]
-        public string Name { get; set; }
+        public string Username { get; set; }
         [DataMember]
         public string Pasword { get; set; }
         [DataMember]
@@ -22,6 +22,7 @@ namespace Sklep.Service.DTO
         public int AddressID { get; set; }
         [DataMember]
         public AddressDTO Address { get; set; }
-
+        [DataMember]
+        public string Email { get; set; }
     }
 }

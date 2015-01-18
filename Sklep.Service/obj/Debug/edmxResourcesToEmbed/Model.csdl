@@ -71,6 +71,7 @@
     <Property Name="Pasword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Roles" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="AddressID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Address" Relationship="Self.Users_Addresses" FromRole="Users" ToRole="Addresses" />
     <NavigationProperty Name="Orders" Relationship="Self.Orders_Users" FromRole="Users" ToRole="Orders" />
   </EntityType>

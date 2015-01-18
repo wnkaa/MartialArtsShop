@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-
+using Sklep.WebApp.App_Start;
 namespace Sklep.WebApp
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -14,6 +14,7 @@ namespace Sklep.WebApp
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
             //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 
         }
         public static void RegisterRoutes(RouteCollection routes)

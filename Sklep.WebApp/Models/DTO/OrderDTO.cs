@@ -11,7 +11,7 @@ namespace Sklep.WebApp.Models.DTO
         public int OrderID { get; set; }
 
         public DateTime OrderDate { get; set; }
-        public int CartID { get; set; }
+        public Nullable<int> CartID { get; set; }
         public CartDTO Cart { get; set; }
 
         public int UserID { get; set; }

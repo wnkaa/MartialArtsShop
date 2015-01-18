@@ -37,10 +37,10 @@ namespace Sklep.Service
 
         public void add(OrderDTO order)
         {
-
-           // //Order ord = new Order() {OrderDate = order.OrderDate, UserID= order.UserID , User = ctx.Users.FirstOrDefault(u=> u.UserID==order.UserID), CartID = order.CartID, Cart= ctx.Carts.FirstOrDefault(c=> c.CartID == order.CartID) };
-            Order orde = new Order { CartID=2035, OrderDate = DateTime.Now, UserID =3};
-            //Order orde = Mapper.Map<Order>(order);
+            Order orde = Mapper.Map<Order>(order);
+            var cart = ctx.Carts.OrderByDescending(c => c.CartID).Take(1).First();
+            orde.Cart = cart;
+            orde.CartID = cart.CartID;
             ctx.Orders.Add(orde);
             ctx.SaveChanges();
         }

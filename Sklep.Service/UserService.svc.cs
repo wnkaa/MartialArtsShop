@@ -43,7 +43,14 @@ namespace Sklep.Service
         }
         public void add(UserDTO user)
         {
+           var adr= ctx.Addresses.OrderByDescending(a => a.AddressID).Take(1);
+           
             User usr = Mapper.Map<User>(user);
+            usr.Address = adr.First();
+            usr.AddressID = adr.First().AddressID;
+
+           
+            
             ctx.Users.Add(usr);
             ctx.SaveChanges();
         }

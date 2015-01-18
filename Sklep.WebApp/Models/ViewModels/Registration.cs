@@ -5,34 +5,23 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 namespace Sklep.WebApp.Models.ViewModels
 {
-    public class Registration
+    public class RegistrationModel
     {
-        public int UserID { get; set; }
         [Required]
-        [StringLength(150)]
-        [Display(Name = "Email Address: ")]
-        [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-                            @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
-                            @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$",
-                            ErrorMessage = "Email is not valid")]
+        public string UserName { get; set; }
+        [Required]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [StringLength(150,MinimumLength=6)]
-        [Display(Name ="Password")]
-        public string Password { get; set; }
-        public string PasswordSalt { get; set; }
+        public int Password { get; set; }
         [Required]
-        [Display(Name = "First Name: ")]
-        public string FirstName { get; set; }
+        public string Street { get; set; }
+        [Required]
+        [MaxLength(9, ErrorMessage="Number must be 9 numbers")]
+        public string Phone { get; set; }
 
-        [Required]
-        [Display(Name = "Last Name: ")]
-        public string LastName { get; set; }
-        public string UserType { get; set; }
-        public System.DateTime CreatedDate { get; set; }
-        public bool IsActive { get; set; }
-        public string IPAddress { get; set; }
+        
 
     }
 }
